@@ -108,5 +108,17 @@ $(function(){
      $(".mainRecoSol .slider .item1").css("display","none");
      $(".mainRecoSol .slider .item2").css("display","block");
    }
+
+   $(".mainPlusSol .bx-pager .bx-pager-item").click(function(){
+     let index = $(this).index();
+     $(".mainPlusSol .bx-pager .bx-pager-item a").removeClass("active");
+     $("a",this).addClass("active");
+     if(index == 0){
+       $(".mainPlusoSol .slider .item1").css("display","block");
+       $(".mainPlusSol .slider .item2").css("display","none");
+     }else if(index == 1) {
+       $(".mainPlusSol .slider .item1").css("display","none");
+       $(".mainPlusSol .slider .item2").css("display","block");
+     }
  });
 });
