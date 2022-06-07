@@ -78,7 +78,11 @@ $(function(){
  $(".mainVisual .bx-pager .bx-pager-item").click(function(){
    let index = $(this).index();
    $(".mainVisual .slider .items").css("display","none");
+   $("a",this).removeClass('active');
+   $(".mainVisual .slider > li").removeClass('active');
    $(".mainVisual .slider .items:eq("+index+")").css("display","block");
+   $(".mainVisual .slider > li:eq("+index+")").addClass('active');
+   $("> a",this).addClass('active');
  });
 
  $(".mainVisual .bx-next").click(function(){
@@ -96,6 +100,8 @@ $(function(){
    $(".mainSv .svList:eq("+index+")").css("display","block");
  });
 
+ $(".svCategory .svList")
+
  // RecoSol 화면전환 ver 0.1
  $(".mainRecoSol .bx-pager .bx-pager-item").click(function(){
    let index = $(this).index();
@@ -109,6 +115,7 @@ $(function(){
      $(".mainRecoSol .slider .item2").css("display","block");
    }
  });
+ // PlusSol 화면전환 ver 0.1
    $(".mainPlusSol .bx-pager .bx-pager-item").click(function(){
      let index = $(this).index();
      $(".mainPlusSol .bx-pager .bx-pager-item a").removeClass("active");
@@ -121,4 +128,13 @@ $(function(){
        $(".mainPlusSol .slider .item2").addClass('active');
      }
  });
+ // Manual 화면전환 ver 0.1
+ $(".mainManual .wrapper dt").mouseenter(function(){
+   index = ($(this).index()/2);
+   $(".mainManual .wrapper dd").removeClass("on");
+   $(".mainManual .wrapper dt a").removeClass("on");
+   $("> a",this).addClass("on");
+   $(".mainManual .wrapper dd:eq("+index+")").addClass("on");
+ });
+
 });

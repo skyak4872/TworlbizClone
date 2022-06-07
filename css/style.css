@@ -1853,7 +1853,7 @@ button {
   background-color: #d9d9d9;
 }
 
-.main_content .mainVisual .bx-pager .bx-pager-item a.active:after {
+.main_content .mainVisual .bx-pager .bx-pager-item a.active::after {
   width: 90px;
   background-color: #e22f26;
   animation: bxpager 6s linear;
@@ -1907,6 +1907,10 @@ button {
 
 .mainVisual .active .shutter {
   transform: rotate(45deg);
+}
+
+.mainVisual .items:nth-child(even).active .shutter {
+  transform: rotate(-45deg);
 }
 
 .mainVisual .shutter {
@@ -2712,6 +2716,11 @@ button {
   vertical-align: top;
   background: url("../img/Manual/bul_c.png") no-repeat 0 0;
   transition: all .4s;
+}
+
+.mainManual dd a:hover strong:after {
+  margin-left: 30px;
+  transform: rotate(360deg);
 }
 
 .mainManual dt .num2 {
