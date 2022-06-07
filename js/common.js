@@ -114,11 +114,11 @@ $(function(){
      $(".mainPlusSol .bx-pager .bx-pager-item a").removeClass("active");
      $("a",this).addClass("active");
      if(index == 0){
-       $(".mainPlusoSol .slider .item1").css("display","block");
-       $(".mainPlusSol .slider .item2").css("display","none");
+       $(".mainPlusSol .slider .item").removeClass('active');
+       $(".mainPlusSol .slider .item1").addClass('active');
      }else if(index == 1) {
-       $(".mainPlusSol .slider .item1").css("display","none");
-       $(".mainPlusSol .slider .item2").css("display","block");
+       $(".mainPlusSol .slider .item").removeClass('active');
+       $(".mainPlusSol .slider .item2").addClass('active');
      }
  });
 });
