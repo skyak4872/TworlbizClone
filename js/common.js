@@ -108,7 +108,7 @@ $(function(){
      $(".mainRecoSol .slider .item1").css("display","none");
      $(".mainRecoSol .slider .item2").css("display","block");
    }
-
+ });
    $(".mainPlusSol .bx-pager .bx-pager-item").click(function(){
      let index = $(this).index();
      $(".mainPlusSol .bx-pager .bx-pager-item a").removeClass("active");
